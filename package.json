@@ -1,0 +1,22 @@
+{
+  "name": "binance-trading-bot",
+  "version": "1.0.0",
+  "description": "A futures trading bot for Binance using Node.js.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "keywords": [
+    "binance",
+    "trading-bot",
+    "crypto",
+    "futures"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "node-binance-api": "^1.0.0"
+  }
+}
