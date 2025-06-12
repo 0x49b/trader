@@ -82,7 +82,11 @@ async function reverseFailingPosition(position) {
     const { availableBalance } = await binance.futuresAccount();
     const riskAmount = Math.max(minNotional, availableBalance * 0.2);
     const price = await getCurrentPrice(symbol);
-    const size = roundToPrecision((riskAmount / price) * 2, basePrecision);
+    const size = roundToPrecision((riskAmount / price), basePrecision);
+
+
+
+
 
     const side = Number(position.positionAmt) > 0 ? 'SELL' : 'BUY';
     return placeOrder(symbol, side, size, { leverage: 20 });
